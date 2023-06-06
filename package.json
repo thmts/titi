@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
-    "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",   
   },
-  "homepages": "https://thmts.github.io/titi",
+  "homepage": "https://thmts.github.io/titi",
   "dependencies": {
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
